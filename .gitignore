@@ -205,3 +205,50 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+
+# Project Specific Data
+data/*
+!data/.gitkeep
+# Large data formats (e.g. Scanpy/Squidpy/Bioinformatics)
+*.h5ad
+*.zarr
+*.h5
+*.hdf5
+*.tiff
+*.tif
+*.geojson
+*.parquet
+*.feather
+*.csv
+*.tsv
+*.xlsx
+
+# Model Artifacts/Checkpoints
+*.pth
+*.pt
+*.ckpt
+models/
+model_checkpoints/
+
+# Docker
+docker-compose.override.yml
+*.log
+*.sql
+*.sqlite
+
+# IDEs
+.vscode/
+.idea/
+.history/
+*.code-workspace
