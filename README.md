@@ -22,7 +22,7 @@ Existing tools for niche detection use graph community detection (SquidPy / Leid
 
 ## Results
 
-**Cluster quality.** Each niche's mean signaling vector was compared against 1,000 same-sized random subsamples of the dataset. P-values were computed from a beta distribution fit to the random correlations. All extracted niches were statistically significant at p < 0.002.
+**Cluster quality.** Each niche's mean signaling vector was compared against 1,000 same-sized random subsamples of the dataset. P-values were computed from a beta distribution fit to the random correlations. Almost all extracted niches were statistically significant at p < 0.002.
 
 **Cell type spread.** Cell types were distributed across niches rather than concentrated within them, consistent with niches being organized by signaling context rather than cell identity.
 
@@ -30,8 +30,8 @@ Existing tools for niche detection use graph community detection (SquidPy / Leid
 
 | Tool                 | p < 0.005 | 0.005 < p < 0.05 | p > 0.05 |
 | -------------------- | --------- | ---------------- | -------- |
-| SquidPy              | 29        | 6                | 3        |
-| NicheMRF (this work) | 8         | 0                | 0        |
+| SquidPy              | 28        | 6                | 4        |
+| NicheMRF (this work) | 9         | 1                | 1        |
 
 NicheMRF produced fewer, spatially compact niches; all passed the significance threshold. SquidPy produced finer-grained partitions with three that did not.
 
