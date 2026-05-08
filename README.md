@@ -6,7 +6,7 @@ A functional niche is a spatially coherent group of neighboring cells with simil
 
 **Authors:** Jada Dixon, Thomas Sibilly, Jonah Stockwell
 
-**Data:** https://doi.org/10.6019/S-BIAD2146
+**Data:** All raw data is available at https://doi.org/10.6019/S-BIAD2146. We have also provided sample files at two steps of the pipeline: "lymph_node_50k_sample.h5ad" (produced by nicheMRF_start) and "lymph_node_50k_with_signaling.h5ad" (produced by nicheMRF_preprocessing)
 
 ## Overview
 
@@ -19,6 +19,8 @@ Existing tools for niche detection use graph community detection (SquidPy / Leid
 **Features.** COMMOT infers per-cell signaling activity across all LR pairs in the CellChat human database. Each cell's feature vector encodes total communication activity per pathway.
 
 **Inference.** A Gaussian Mixture Model provides initial niche assignments. EM then iterates: the E-step computes soft memberships combining GMM likelihoods with a Potts spatial coupling term; the M-step updates GMM parameters via weighted MLE. Convergence is declared when the max change in soft assignments falls below 1e-5.
+
+Notebooks should be run in the following order: nicheMRF_start (produces "lymph_node_50k_sample.h5ad") > nicheMRF_preprocessing (produces "lymph_node_50k_with_signaling.h5ad") > nicheMRF_inference (produces AnnData object and figures)
 
 ## Results
 
